@@ -1,0 +1,8 @@
+ds * 16 +  address 
+
+
+this address is called offset 
+
+when we use org , then assembler add org value is all variabvle addres and refernces 
+
+but in hard coded address like 0x1234 ,  contetn of ds is added

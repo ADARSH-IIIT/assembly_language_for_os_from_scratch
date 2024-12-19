@@ -1,0 +1,38 @@
+these jump statements are used with compare statemenrt 
+
+
+compare statement set the flag according to comparison and then we can chamge flow of program 
+
+
+jmp ===> always jump 
+
+
+
+
+
+cmp al  , 5 
+je , line1
+jge line2 
+
+
+these jumps are conditional , jump to line 1 if result is equal or skip it 
+jump to line2 if result is 4-5  is >=0
+
+
+
+how it compares 
+
+
+al-value 
+
+
+
+------------------------------------- syntax -------------------------------------
+cmp al , value =====> syntax 
+
+
+je line 4
+
+
+line4 : 
+------------------------------------- syntax -------------------------------------

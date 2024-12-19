@@ -1,0 +1,37 @@
+Creating strings in assembly language 
+
+as we are working with variable so set the org correctly to 0x7c00 
+
+
+
+my_string : 
+   db 'hello_world' ,  0  
+
+
+
+it will save each character in each memory cell 
+
+
+h 
+e 
+l 
+l 
+o 
+0 
+
+0 ==> end of string 
+
+to acess string 
+
+h ==> [my_string + 0 ]
+e ==> [my_string + 1 ]
+l ==> [my_string + 2 ]
+l ==> [my_string + 3 ]
+o ==> [my_string  + 4 ]
+0 ===>   [my_string  + 5 ]
+
+0 will also present in ram 
+
+if we are saming number in var , we can define it anywhere 
+
+if we are defining string , char in var , define it just above jmp $ , use address of var , should be below where it is accessed 

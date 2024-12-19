@@ -1,0 +1,60 @@
+stack has 2 function , push pop 
+
+
+
+
+push 
+as stack grows upward , if we push stack pointer decrement by 2 , in upward 
+
+pop 
+if we pop , sp moves downward by 2 cell , inc sp by 2 
+
+
+why 2 cell ==> push pop always save a 16 bit data in 2 mem location consecutively 
+in pop top 2 values get popped 
+
+this is property of x86 
+
+
+in x86 , if we pop something sp increase by 2 cells , but the values which had been popped out , does not erase from memory , we can still acces them by there mem location , until and unless we have stored some new data at that location 
+
+
+
+
+two important register 
+
+sp ==> stack pointer 
+
+bp ==> base pointer
+
+
+
+
+
+how push pop works 
+
+push 'a' 
+
+s1 ==> dec sp upward by 2 cell ,
+s2==>  now read data from l to r and save first 8 bit in sp , and next 8 bit in sp-1 
+
+note 
+in case pop we alwauys have to pass a 16 bit register 
+
+in case of push 'a' , 'ab' , 'abc'  
+a ok 
+ab ok 
+
+abc ok but c get ignored , only first 16 bit 
+
+
+
+push ab 
+
+stack 
+    sp--->  b
+            a
+
+
+
+the sp and bp hold address , as these are hardcoded ==> ds*16 + offset is actual address s in ram 

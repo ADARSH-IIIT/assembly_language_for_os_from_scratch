@@ -1,0 +1,42 @@
+
+
+
+and cx , 0x000f 
+
+
+
+and btw cx and 0x000f , and save the result in cx 
+
+and cl , 0xff
+as cl is holds 8 bit so 0xff , and and then in cl 
+
+
+
+
+
+
+
+left right shift 
+
+cx = 0x1234
+
+===> cx    0001  0010  0011  0100
+
+right  shift   shr  cx , 3    shift cs by right by 3 bits 
+
+   cx ===>    000  0001  0010   0011   0   =====> 0000 0010 0100 0110 
+
+
+   save new result in cx itself 
+
+
+
+for left shift   shl cx , no of bits 
+
+
+
+
+
+shr and shl  ===> shift right , shift left 
+
+

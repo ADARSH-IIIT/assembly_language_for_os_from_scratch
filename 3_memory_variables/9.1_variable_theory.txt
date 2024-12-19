@@ -1,0 +1,85 @@
+in this lesson we will learn how to create a variable in asm 
+
+in assembly we cant display numbers directly using interupt 16 
+we display char only using their ascii 
+
+but in register the numbers are there so we can apply any arithmetic operation 
+
+
+
+HOW T OCREATE A VAR 
+
+
+var ===> a resrved mem location with some name 
+
+
+always create var before padding statement 
+
+padding should be end of file 
+
+
+
+
+
+syntax  t ocreate variable 
+
+
+varname : 
+db 0x12
+
+
+db ==> defined byte ==> 1 byte ==> 8bit == >we can save data of 8 bit 0x00 to 0xff   ==> in decimal 0 to 2power8 -1==> 255  
+
+but it may casue an erro 
+
+
+eg 255 ==> 1111 1111    ++ > msb 1 ==> -ve ==> 2s complement 
+
+256 ===>  1 0000 0000    ===> overflow ===> actual number in register ==== 0 
+
+256 + 65 ==> points to 65 ==>  A
+
+
+
+
+dw ===> defined words ==> big endian 
+word==> 2 byte ==> 8-8bit ==> 2 cell in ram 
+
+as mem location block is of 8 but 
+
+dw ==> will write datain 2 consecutive me m cell 
+
+dw 0xaa55 
+
+0xabcd  ===> 0x55
+0xabce  ===> 0xaa
+big endian 
+
+
+
+
+
+dw 0xaa55  ===> db 0x55 db 0xaa 
+
+allowed 
+
+
+
+varname : 
+db 0x11
+db 0x13
+db 0x14
+
+
+[varname]==> 0x11
+[varname + 1 ]==> 0x13
+[varname + 2 ]==> 0x14
+
+how it is working in next txt file 
+
+
+
+var:
+dw -----
+dw ----
+dw----

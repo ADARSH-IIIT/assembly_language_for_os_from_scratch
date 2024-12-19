@@ -1,0 +1,96 @@
+
+definition 
+
+
+
+
+
+
+
+
+
+
+dx is not segment register 
+
+ds , es ,ss etc are 
+
+right now we see es and ds 
+
+
+ds ==> data semnent 
+es ==> extra segment 
+
+
+
+segmenta register never changes , the relative address of variable 
+
+but when we try to save data at mem location , and retrives the data from mem location then it affects 
+
+
+mov byte [ 0x1234 ] , 'a' 
+
+now data wont get stored in 0x1234 
+
+mov bx , [ 0x1234 ]
+now data wont come from 0x1234 
+
+in both cases segment register play an imp role 
+
+
+
+first of all note that , if we use org 0x7c00 ===> each var and mem location is now shifted by 7c00 ====>>>  WRONGGGGGG
+
+the address of var get shifted by 0x7c00 only ,   when we say mystring , relative address 0x0001 ==> abs address 0x7c01 
+
+mov al , [ 0x1234 ]
+
+if we write org 0x7c00  then   0x1234 do not automatically chaned to 0x7c00 + 0x1234
+we have to do it explicity 
+
+
+
+
+mystring ===> relative address of mystring
+
+
+org 0x7c00
+mystring ======> now var is pointing to 0x7c00+0x1234   ===> now address get shifted by 0x7c00 
+
+
+
+to access  valu at 0x1234 
+
+
+[   0x7c00  +  0x1234  ]
+
+
+or use org 0x7c00  
+
+both do same thing 
+org 0x7c00 
+
+
+
+
+by default ds 
+
+[1234] ===> ds*16 + 1234 
+
+ds:[]  ===  []  === [ ds:]          ===> all are same 
+
+
+if we use es 
+
+then specific write es:[]  or [  es : ]
+
+then ds will be ignored and only es is considered 
+es*16 + offset 
+
+
+
+
+0x1 * 16 ====> left shift by 1 byte ===> 0x10
+
+0x1234  *16  ===>  0x2340  and so on 
+
+

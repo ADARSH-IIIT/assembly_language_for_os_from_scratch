@@ -1,0 +1,13 @@
+what are issues if we implement function using jump 
+
+
+a lot of jump 
+
+
+after each function call , we have to specify a return line , so that pc , comes to next line of function call 
+
+
+to solve this we can use call ret
+
+ret , jumps the pc just after the line where function is called 
+call ==> used to call the functioon 

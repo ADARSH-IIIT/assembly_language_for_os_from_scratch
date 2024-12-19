@@ -1,0 +1,39 @@
+basically in this page we will learn is 0z1234 is absolute adress in ram , or relative or what it is ???
+
+
+
+when we write [0x1234] ==> value at 
+it will we used t osave value at that mem location or retrive from that location 
+
+
+ds register ==> default segment 
+
+
+when our program loads in ram , binary file , machine ubnderatnable code , we load it in ram 
+
+all binary code get moved to a 0x7c00  in ram 
+
+first line of instruction is at 0x7c00 and so on 
+
+
+by default ds will set to 0x7c00  
+
+mov [0x1234] 44  
+
+
+===>    0x7c00 *16  + 0x1234   , it is exact location in ram where are saving the 14 
+
+similary if we retrive the data from [0x1234]===> it will add ds*16
+
+
+this thing is happening automattically 
+
+
+we can set ds explicitly 
+
+
+
+
+
+
+[0x1234]  hai ===>   ds register * 16 automatically add hoga hi hoga 

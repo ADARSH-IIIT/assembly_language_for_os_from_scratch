@@ -1,0 +1,41 @@
+
+
+
+pusha  ===> push all in stack 
+
+popa   ====> pop all from stack 
+
+
+
+
+pusha ==> it will push data of general purapose register to stack 
+
+popa  ==> it will pop data from stack  to  general purapose register
+
+
+
+it is used to save state of system 
+
+
+=============================================== RULES ==========================================================
+between two pusha and popa pair , there should not be any change push pop , change sp , bp of stack , it will throw error 
+but we can change any gp register , after popa , old state get restored 
+nested pusha and popa allowed   16.3 code 
+=============================================== RULES ==========================================================
+
+
+
+
+
+stack after pusha 
+[DI]  <- top of stack
+[SI]
+[BP]
+[SP]
+[BX]
+[DX]
+[CX]
+[AX]
+
+
+this is order to save data in stack 

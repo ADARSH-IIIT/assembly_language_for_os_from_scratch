@@ -1,0 +1,7 @@
+definition of function 
+
+it is a block of code , which can be reused 
+if we do not call function , this block of code should not execute 
+
+
+we can implem,ent function and function calls using jumps or call-return 
